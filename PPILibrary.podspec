@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.name               = "PPILibrary"
   spec.version            = "0.0.1"
-  spec.homepage           = "http://EXAMPLE/PPILibrary"
+  spec.homepage           = "https://github.com/ShenYj/PPILibrary"
   spec.license            = { :type => "MIT", :file => "License" }
   spec.authors            = { "ShenYj" => "shenyanjie123@foxmail.com" }
   spec.social_media_url   = "https://github.com/ShenYj/ShenYj.github.io/wiki"
