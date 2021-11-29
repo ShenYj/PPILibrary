@@ -94,6 +94,7 @@
 		F73741DC27548E9700F95752 /* UIImage+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		F73741DD27548E9700F95752 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 		F73741F827549A0C00F95752 /* PPILibrary.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PPILibrary.podspec; sourceTree = "<group>"; };
+		F73741F92754B10100F95752 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +178,7 @@
 		F737419827548AAE00F95752 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F73741F92754B10100F95752 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,7 +346,6 @@
 				F73741EA27548E9700F95752 /* UIFont+Ex.swift in Sources */,
 				F73741EE27548E9700F95752 /* UIImage+Ex.swift in Sources */,
 				F73741DF27548E9700F95752 /* CACornerMask+Ex.swift in Sources */,
-				F73741CB27548D2900F95752 /* PPILibraryConst.swift in Sources */,
 				F73741C327548D1400F95752 /* SandboxReadable.swift in Sources */,
 				F73741C827548D1400F95752 /* Syncable.swift in Sources */,
 				F73741C027548D1400F95752 /* Callable.swift in Sources */,
@@ -353,6 +354,7 @@
 				F73741C427548D1400F95752 /* ExitAppable.swift in Sources */,
 				F73741C227548D1400F95752 /* GetKeyWindowable.swift in Sources */,
 				F73741F72754947400F95752 /* DeviceTokenConvertible.swift in Sources */,
+				F73741CB27548D2900F95752 /* PPILibraryConst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

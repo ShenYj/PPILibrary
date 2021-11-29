@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   
   # Core 基础扩展, 不依赖任何三方库
   spec.subspec "Core" do |core|
-    core.source_files = ['Sources/Core/Protocol/*.swift', 'Sources/Core/Protocol/*.swift', 'Sources/Core/*.h']
+    core.source_files = ['Sources/PPILibrary.h', 'Sources/Core/Protocol/*.swift', 'Sources/Core/Protocol/*.swift']
     core.frameworks = "Foundation", "UIKit"
   end
   
