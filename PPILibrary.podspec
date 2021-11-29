@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name               = "PPILibrary"
-  spec.version            = "0.0.1"
+  spec.version            = "0.0.2"
   spec.homepage           = "https://github.com/ShenYj/PPILibrary"
   spec.license            = { :type => "MIT", :file => "License" }
   spec.authors            = { "ShenYj" => "shenyanjie123@foxmail.com" }
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   
   # Core 基础扩展, 不依赖任何三方库
   spec.subspec "Core" do |core|
-    core.source_files = ['Sources/Core/*.swift', 'Sources/Core/*.h']
+    core.source_files = ['Sources/Core/Protocol/*.swift', 'Sources/Core/Protocol/*.swift', 'Sources/Core/*.h']
     core.frameworks = "Foundation", "UIKit"
   end
   
