@@ -8,6 +8,14 @@ Personal plug-in library
 
 ## 使用
 
-```ruby
-pod 'PPILibrary', :subspecs => ['Core'], :git => 'https://github.com/ShenYj/PPILibrary.git'
-```
+- 根据`subspec`指定
+
+    ```ruby
+    pod 'PPILibrary', :subspecs => ['Core'], :git => 'https://github.com/ShenYj/PPILibrary.git'
+    ```
+
+- 指定版本
+
+    ```ruby
+    pod 'PPILibrary', :git => 'https://github.com/ShenYj/PPILibrary.git', :tag => '0.0.2'
+    ```
