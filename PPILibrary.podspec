@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   个人开发的基础工具扩展库, 通过subspec增加了一些依赖库的扩展支持
   DESC
 
-  spec.default_subspec = ['Core']
+  spec.default_subspecs = ['Core', 'Logger']
   
   spec.ios.deployment_target = "12.0"
   # spec.osx.deployment_target = "10.7"
@@ -33,6 +33,13 @@ Pod::Spec.new do |spec|
   spec.subspec "Core" do |core|
     core.source_files = ['Sources/PPILibrary.h', 'Sources/Core/*.swift', 'Sources/Core/Protocol/*.swift', 'Sources/Core/Extension/*.swift']
     core.frameworks = "Foundation", "UIKit"
+  end
+  
+  # Logger 控制台打印、本地日志记录工具
+  spec.subspec "Logger" do |logger|
+    logger.source_files = "Sources/Logger/"
+    logger.dependency "CocoaLumberjack/Swift", "~> 3.7.2"
+    #logger.dependency "PPILibrary/Core"
   end
   
   #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
