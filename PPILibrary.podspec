@@ -16,34 +16,30 @@ Pod::Spec.new do |spec|
   spec.social_media_url   = "https://github.com/ShenYj/ShenYj.github.io/wiki"
   spec.requires_arc       = true
   spec.swift_versions     = ['5.2', '5.4', '5.5']
+  spec.cocoapods_version  = '>= 1.10.0'
   spec.source             = { :git => "https://github.com/ShenYj/PPILibrary.git", :tag => "#{spec.version}" }
   spec.summary            = "基础工具扩展库."
   spec.description        = <<-DESC
   个人开发的基础工具扩展库, 通过subspec增加了一些依赖库的扩展支持
   DESC
 
-  spec.default_subspecs = ['Core', 'Logger']
-  
+  spec.default_subspecs = "Core"
   spec.ios.deployment_target = "12.0"
-  # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
-  # spec.tvos.deployment_target = "9.0"
   
   # Core 基础扩展, 不依赖任何三方库
   spec.subspec "Core" do |core|
-    core.source_files = ['Sources/PPILibrary.h', 'Sources/Core/*.swift', 'Sources/Core/Protocol/*.swift', 'Sources/Core/Extension/*.swift']
+    core.source_files = "Sources/Core/", "Sources/Core/Protocol/", "Sources/Core/Extension/"
     core.frameworks = "Foundation", "UIKit"
   end
   
   # Logger 控制台打印、本地日志记录工具
   spec.subspec "Logger" do |logger|
     logger.source_files = "Sources/Logger/"
+    logger.dependency "PPILibrary/Core"
     logger.dependency "CocoaLumberjack/Swift", "~> 3.7.2"
-    #logger.dependency "PPILibrary/Core"
   end
-  
-  #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  #spec.exclude_files = "Classes/Exclude"
+
+  # spec.exclude_files = "Classes/Exclude"
   # spec.public_header_files = "Classes/**/*.h"
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
@@ -52,7 +48,6 @@ Pod::Spec.new do |spec|
   # spec.frameworks = "SomeFramework", "AnotherFramework"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
-
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 

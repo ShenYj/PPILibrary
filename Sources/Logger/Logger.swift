@@ -57,8 +57,9 @@ private class LogFormatter: NSObject, DDLogFormatter {
         return "\(timestamp) \(level) \(filename).\(function):\(line) - \(message)"
     }
     
-    private func formattedDate(from date: Date) -> String { return LogFormatter.dateFormatter.string(from: date) }
-    
+    private func formattedDate(from date: Date) -> String {
+        return LogFormatter.dateFormatter.string(from: date)
+    }
 }
 
 /// A shared instance of `Logger`.

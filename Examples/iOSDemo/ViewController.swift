@@ -7,7 +7,7 @@
 
 import UIKit
 import PPILibrary
-import PPILibraryLogger
+
 
 class ViewController: UIViewController {
     
@@ -30,8 +30,7 @@ class ViewController: UIViewController {
         btn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         btn.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        log.debug("\(#function)")
+
     }
 
 }
