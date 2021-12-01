@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7302E1527577AD300ED215C /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7302E1427577AD300ED215C /* RxCocoa.xcframework */; };
+		F7302E172757965700ED215C /* RxGesture.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7302E162757965700ED215C /* RxGesture.xcframework */; };
 		F737419327548A7300F95752 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F737418327548A0B00F95752 /* ViewController.swift */; };
 		F737419427548A7900F95752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F737418927548A0B00F95752 /* AppDelegate.swift */; };
 		F737419527548AA300F95752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F737418427548A0B00F95752 /* Assets.xcassets */; };
@@ -32,12 +34,28 @@
 		F73742512754C2B300F95752 /* PPILibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = F73742502754C2B300F95752 /* PPILibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F738DCDA27568255000918C1 /* PPILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; platformFilter = ios; };
 		F738DCDB27568255000918C1 /* PPILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F738DD16275758CC000918C1 /* CocoaLumberjack.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7541B592755E3A700871787 /* CocoaLumberjack.xcframework */; };
-		F738DD17275758CC000918C1 /* CocoaLumberjackSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7541B462755CBAF00871787 /* CocoaLumberjackSwift.xcframework */; };
-		F738DD1A27575A6F000918C1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DCC1275603C1000918C1 /* Logger.swift */; };
+		F738DD27275762BA000918C1 /* PPILibraryRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD20275762BA000918C1 /* PPILibraryRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F738DD3427576322000918C1 /* PPILibiraryRx.h in Headers */ = {isa = PBXBuildFile; fileRef = F738DD3327576321000918C1 /* PPILibiraryRx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F738DD3E27576345000918C1 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3727576345000918C1 /* ErrorTracker.swift */; };
+		F738DD3F27576345000918C1 /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3827576345000918C1 /* Observable+Operators.swift */; };
+		F738DD4127576345000918C1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3B27576345000918C1 /* ActivityIndicator.swift */; };
+		F738DD4B27577311000918C1 /* RxDataSources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4427577311000918C1 /* RxDataSources.xcframework */; };
+		F738DD4C27577311000918C1 /* RxCocoaRuntime.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4527577311000918C1 /* RxCocoaRuntime.xcframework */; };
+		F738DD4D27577311000918C1 /* RxOptional.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4627577311000918C1 /* RxOptional.xcframework */; };
+		F738DD4E27577311000918C1 /* RxSwiftExt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4727577311000918C1 /* RxSwiftExt.xcframework */; };
+		F738DD4F27577311000918C1 /* NSObject_Rx.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4827577311000918C1 /* NSObject_Rx.xcframework */; };
+		F738DD5027577311000918C1 /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4927577311000918C1 /* RxSwift.xcframework */; };
+		F738DD5127577311000918C1 /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4A27577311000918C1 /* RxRelay.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F7302E112757737400ED215C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F73741172754885D00F95752 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F737411F2754885D00F95752;
+			remoteInfo = PPILibrary;
+		};
 		F737419A27548B0800F95752 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F73741172754885D00F95752 /* Project object */;
@@ -54,6 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F738DD27275762BA000918C1 /* PPILibraryRx.framework in Embed Frameworks */,
 				F738DCDB27568255000918C1 /* PPILibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -62,6 +81,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F7302E1427577AD300ED215C /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoa.xcframework; path = Carthage/Build/RxCocoa.xcframework; sourceTree = "<group>"; };
+		F7302E162757965700ED215C /* RxGesture.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxGesture.xcframework; path = Carthage/Build/RxGesture.xcframework; sourceTree = "<group>"; };
 		F73741202754885D00F95752 /* PPILibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPILibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F737416E275489E600F95752 /* iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F737418327548A0B00F95752 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +112,18 @@
 		F73741F92754B10100F95752 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F73742502754C2B300F95752 /* PPILibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPILibrary.h; sourceTree = "<group>"; };
 		F73742522754C2FA00F95752 /* PPILibraryLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPILibraryLogger.h; sourceTree = "<group>"; };
-		F738DCC1275603C1000918C1 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F738DD20275762BA000918C1 /* PPILibraryRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPILibraryRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F738DD3327576321000918C1 /* PPILibiraryRx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPILibiraryRx.h; sourceTree = "<group>"; };
+		F738DD3727576345000918C1 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		F738DD3827576345000918C1 /* Observable+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Operators.swift"; sourceTree = "<group>"; };
+		F738DD3B27576345000918C1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		F738DD4427577311000918C1 /* RxDataSources.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxDataSources.xcframework; path = Carthage/Build/RxDataSources.xcframework; sourceTree = "<group>"; };
+		F738DD4527577311000918C1 /* RxCocoaRuntime.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoaRuntime.xcframework; path = Carthage/Build/RxCocoaRuntime.xcframework; sourceTree = "<group>"; };
+		F738DD4627577311000918C1 /* RxOptional.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxOptional.xcframework; path = Carthage/Build/RxOptional.xcframework; sourceTree = "<group>"; };
+		F738DD4727577311000918C1 /* RxSwiftExt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwiftExt.xcframework; path = Carthage/Build/RxSwiftExt.xcframework; sourceTree = "<group>"; };
+		F738DD4827577311000918C1 /* NSObject_Rx.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NSObject_Rx.xcframework; path = Carthage/Build/NSObject_Rx.xcframework; sourceTree = "<group>"; };
+		F738DD4927577311000918C1 /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = Carthage/Build/RxSwift.xcframework; sourceTree = "<group>"; };
+		F738DD4A27577311000918C1 /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = Carthage/Build/RxRelay.xcframework; sourceTree = "<group>"; };
 		F7541B432755C2CB00871787 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F7541B442755C33C00871787 /* PPILibrary.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PPILibrary.docc; sourceTree = "<group>"; };
 		F7541B462755CBAF00871787 /* CocoaLumberjackSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjackSwift.xcframework; path = Carthage/Build/CocoaLumberjackSwift.xcframework; sourceTree = "<group>"; };
@@ -103,8 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F738DD16275758CC000918C1 /* CocoaLumberjack.xcframework in Frameworks */,
-				F738DD17275758CC000918C1 /* CocoaLumberjackSwift.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +143,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F738DCDA27568255000918C1 /* PPILibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F738DD1D275762BA000918C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F738DD4B27577311000918C1 /* RxDataSources.xcframework in Frameworks */,
+				F738DD4D27577311000918C1 /* RxOptional.xcframework in Frameworks */,
+				F738DD4E27577311000918C1 /* RxSwiftExt.xcframework in Frameworks */,
+				F738DD4F27577311000918C1 /* NSObject_Rx.xcframework in Frameworks */,
+				F738DD4C27577311000918C1 /* RxCocoaRuntime.xcframework in Frameworks */,
+				F738DD5027577311000918C1 /* RxSwift.xcframework in Frameworks */,
+				F7302E1527577AD300ED215C /* RxCocoa.xcframework in Frameworks */,
+				F738DD5127577311000918C1 /* RxRelay.xcframework in Frameworks */,
+				F7302E172757965700ED215C /* RxGesture.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +182,7 @@
 			children = (
 				F73741202754885D00F95752 /* PPILibrary.framework */,
 				F737416E275489E600F95752 /* iOSDemo.app */,
+				F738DD20275762BA000918C1 /* PPILibraryRx.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,8 +190,8 @@
 		F737412E2754893700F95752 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F738DD3527576345000918C1 /* Rx */,
 				F737424F2754C2B300F95752 /* Supporting Files */,
-				F737421D2754BB9A00F95752 /* Logger */,
 				F737419C27548B6000F95752 /* Core */,
 			);
 			path = Sources;
@@ -174,6 +221,15 @@
 		F737419827548AAE00F95752 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7302E162757965700ED215C /* RxGesture.xcframework */,
+				F7302E1427577AD300ED215C /* RxCocoa.xcframework */,
+				F738DD4827577311000918C1 /* NSObject_Rx.xcframework */,
+				F738DD4527577311000918C1 /* RxCocoaRuntime.xcframework */,
+				F738DD4427577311000918C1 /* RxDataSources.xcframework */,
+				F738DD4627577311000918C1 /* RxOptional.xcframework */,
+				F738DD4A27577311000918C1 /* RxRelay.xcframework */,
+				F738DD4927577311000918C1 /* RxSwift.xcframework */,
+				F738DD4727577311000918C1 /* RxSwiftExt.xcframework */,
 				F7541B592755E3A700871787 /* CocoaLumberjack.xcframework */,
 				F7541B462755CBAF00871787 /* CocoaLumberjackSwift.xcframework */,
 				F73741F92754B10100F95752 /* Foundation.framework */,
@@ -221,21 +277,40 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		F737421D2754BB9A00F95752 /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				F738DCC1275603C1000918C1 /* Logger.swift */,
-			);
-			path = Logger;
-			sourceTree = "<group>";
-		};
 		F737424F2754C2B300F95752 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				F73742502754C2B300F95752 /* PPILibrary.h */,
+				F738DD3327576321000918C1 /* PPILibiraryRx.h */,
 				F73742522754C2FA00F95752 /* PPILibraryLogger.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F738DD3527576345000918C1 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				F738DD3827576345000918C1 /* Observable+Operators.swift */,
+				F738DD3627576345000918C1 /* RxErrorTracker */,
+				F738DD3A27576345000918C1 /* RxActivityIndicator */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		F738DD3627576345000918C1 /* RxErrorTracker */ = {
+			isa = PBXGroup;
+			children = (
+				F738DD3727576345000918C1 /* ErrorTracker.swift */,
+			);
+			path = RxErrorTracker;
+			sourceTree = "<group>";
+		};
+		F738DD3A27576345000918C1 /* RxActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				F738DD3B27576345000918C1 /* ActivityIndicator.swift */,
+			);
+			path = RxActivityIndicator;
 			sourceTree = "<group>";
 		};
 		F7541B3F2755C29100871787 /* Documents */ = {
@@ -263,6 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F73742512754C2B300F95752 /* PPILibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F738DD1B275762BA000918C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F738DD3427576322000918C1 /* PPILibiraryRx.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +389,25 @@
 			productReference = F737416E275489E600F95752 /* iOSDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F738DD1F275762BA000918C1 /* PPILibraryRx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F738DD28275762BA000918C1 /* Build configuration list for PBXNativeTarget "PPILibraryRx" */;
+			buildPhases = (
+				F738DD1B275762BA000918C1 /* Headers */,
+				F738DD1C275762BA000918C1 /* Sources */,
+				F738DD1D275762BA000918C1 /* Frameworks */,
+				F738DD1E275762BA000918C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7302E122757737400ED215C /* PBXTargetDependency */,
+			);
+			name = PPILibraryRx;
+			productName = PPILibiraryRx;
+			productReference = F738DD20275762BA000918C1 /* PPILibraryRx.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -321,6 +423,9 @@
 						LastSwiftMigration = 1310;
 					};
 					F737416D275489E600F95752 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					F738DD1F275762BA000918C1 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -340,6 +445,7 @@
 			targets = (
 				F737416D275489E600F95752 /* iOSDemo */,
 				F737411F2754885D00F95752 /* PPILibrary */,
+				F738DD1F275762BA000918C1 /* PPILibraryRx */,
 			);
 		};
 /* End PBXProject section */
@@ -359,6 +465,13 @@
 				F737419727548AAA00F95752 /* Main.storyboard in Resources */,
 				F737419627548AA600F95752 /* LaunchScreen.storyboard in Resources */,
 				F737419527548AA300F95752 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F738DD1E275762BA000918C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +495,6 @@
 				F73741C027548D1400F95752 /* Callable.swift in Sources */,
 				F73741BF27548D1400F95752 /* OpenURLable.swift in Sources */,
 				F73741C627548D1400F95752 /* OpenSettingable.swift in Sources */,
-				F738DD1A27575A6F000918C1 /* Logger.swift in Sources */,
 				F73741C427548D1400F95752 /* ExitAppable.swift in Sources */,
 				F73741C227548D1400F95752 /* GetKeyWindowable.swift in Sources */,
 				F73741F72754947400F95752 /* DeviceTokenConvertible.swift in Sources */,
@@ -399,9 +511,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F738DD1C275762BA000918C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F738DD4127576345000918C1 /* ActivityIndicator.swift in Sources */,
+				F738DD3F27576345000918C1 /* Observable+Operators.swift in Sources */,
+				F738DD3E27576345000918C1 /* ErrorTracker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F7302E122757737400ED215C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F737411F2754885D00F95752 /* PPILibrary */;
+			targetProxy = F7302E112757737400ED215C /* PBXContainerItemProxy */;
+		};
 		F737419B27548B0800F95752 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F737411F2754885D00F95752 /* PPILibrary */;
@@ -680,6 +807,66 @@
 			};
 			name = Release;
 		};
+		F738DD29275762BA000918C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.shenyj.rx.PPILibiraryRx;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F738DD2A275762BA000918C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.shenyj.rx.PPILibiraryRx;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -706,6 +893,15 @@
 			buildConfigurations = (
 				F7374180275489E700F95752 /* Debug */,
 				F7374181275489E700F95752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F738DD28275762BA000918C1 /* Build configuration list for PBXNativeTarget "PPILibraryRx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F738DD29275762BA000918C1 /* Debug */,
+				F738DD2A275762BA000918C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

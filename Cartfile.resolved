@@ -1,2 +1,6 @@
-github "CocoaLumberjack/CocoaLumberjack" "3.7.2"
 github "ReactiveX/RxSwift" "6.2.0"
+github "RxSwiftCommunity/NSObject-Rx" "5.2.2"
+github "RxSwiftCommunity/RxDataSources" "5.0.2"
+github "RxSwiftCommunity/RxGesture" "4.0.2"
+github "RxSwiftCommunity/RxOptional" "v5.0.4"
+github "RxSwiftCommunity/RxSwiftExt" "6.1.0"

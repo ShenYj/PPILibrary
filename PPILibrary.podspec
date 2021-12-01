@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.authors            = { "ShenYj" => "shenyanjie123@foxmail.com" }
   spec.social_media_url   = "https://github.com/ShenYj/ShenYj.github.io/wiki"
   spec.requires_arc       = true
-  spec.swift_versions     = [5.0, '5.2', '5.4', '5.5']
+  spec.swift_versions     = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5']
   spec.cocoapods_version  = '>= 1.10.0'
   spec.source             = { :git => "https://github.com/ShenYj/PPILibrary.git", :tag => "#{spec.version}" }
   spec.summary            = "基础工具扩展库."
@@ -25,12 +25,26 @@ Pod::Spec.new do |spec|
 
   spec.default_subspecs = "Core"
   spec.ios.deployment_target = "12.0"
-  spec.dependency "CocoaLumberjack/Swift", "~> 3.7.2"
   
   # Core 基础扩展
   spec.subspec "Core" do |core|
-    core.source_files = "Sources/Core/", "Sources/Core/Protocol/", "Sources/Core/Extension/", "Sources/Logger/"
+    core.source_files = "Sources/Core/", "Sources/Core/Protocol/", "Sources/Core/Extension/"
     core.frameworks = "Foundation", "UIKit"
+  end
+  
+  # RxSwift 扩展
+  spec.subspec "Rx" do |rx|
+    rx.source_files = "Sources/Rx/", "Sources/Rx/RxErrorTracker/", "Sources/Rx/RxActivityIndicator/"
+    rx.dependency "PPILibrary/Core"
+    
+    rx.dependency "RxSwift", "~> 6.0"
+    rx.dependency "RxCocoa", "~> 6.0"
+    rx.dependency "RxSwiftExt", "~> 6.0"
+    rx.dependency "RxOptional", "~> 5.0"
+    rx.dependency "NSObject+Rx", "~> 5.0"
+    rx.dependency "RxGesture", "~> 4.0"
+    rx.dependency "RxDataSources", "~> 5.0"
+
   end
   
 end

@@ -96,7 +96,7 @@ PLATFORMS
   universal-darwin-21
 
 DEPENDENCIES
-  cocoapods (~> 1.10)
+  cocoapods (~> 1.11.2)
   xcpretty
   xcpretty-json-formatter
 

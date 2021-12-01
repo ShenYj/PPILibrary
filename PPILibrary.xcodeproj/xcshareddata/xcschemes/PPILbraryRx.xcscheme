@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F737425A275503E000F95752"
-               BuildableName = "PPILibraryLogger.framework"
-               BlueprintName = "PPILibraryLogger"
+               BlueprintIdentifier = "F738DD1F275762BA000918C1"
+               BuildableName = "PPILibiraryRx.framework"
+               BlueprintName = "PPILibraryRx"
                ReferencedContainer = "container:PPILibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F737425A275503E000F95752"
-            BuildableName = "PPILibraryLogger.framework"
-            BlueprintName = "PPILibraryLogger"
+            BlueprintIdentifier = "F738DD1F275762BA000918C1"
+            BuildableName = "PPILibiraryRx.framework"
+            BlueprintName = "PPILibraryRx"
             ReferencedContainer = "container:PPILibrary.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
