@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.authors            = { "ShenYj" => "shenyanjie123@foxmail.com" }
   spec.social_media_url   = "https://github.com/ShenYj/ShenYj.github.io/wiki"
   spec.requires_arc       = true
-  spec.swift_versions     = ['5.2', '5.4', '5.5']
+  spec.swift_versions     = [5.0, '5.2', '5.4', '5.5']
   spec.cocoapods_version  = '>= 1.10.0'
   spec.source             = { :git => "https://github.com/ShenYj/PPILibrary.git", :tag => "#{spec.version}" }
   spec.summary            = "基础工具扩展库."
@@ -25,30 +25,12 @@ Pod::Spec.new do |spec|
 
   spec.default_subspecs = "Core"
   spec.ios.deployment_target = "12.0"
+  spec.dependency "CocoaLumberjack/Swift", "~> 3.7.2"
   
-  # Core 基础扩展, 不依赖任何三方库
+  # Core 基础扩展
   spec.subspec "Core" do |core|
-    core.source_files = "Sources/Core/", "Sources/Core/Protocol/", "Sources/Core/Extension/"
+    core.source_files = "Sources/Core/", "Sources/Core/Protocol/", "Sources/Core/Extension/", "Sources/Logger/"
     core.frameworks = "Foundation", "UIKit"
   end
   
-  # Logger 控制台打印、本地日志记录工具
-  spec.subspec "Logger" do |logger|
-    logger.source_files = "Sources/Logger/"
-    logger.dependency "PPILibrary/Core"
-    logger.dependency "CocoaLumberjack/Swift", "~> 3.7.2"
-  end
-
-  # spec.exclude_files = "Classes/Exclude"
-  # spec.public_header_files = "Classes/**/*.h"
-  # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
-
 end

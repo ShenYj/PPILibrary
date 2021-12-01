@@ -8,7 +8,6 @@
 import UIKit
 import PPILibrary
 
-
 class ViewController: UIViewController {
     
     private lazy var btn: UIButton = {
@@ -31,6 +30,7 @@ class ViewController: UIViewController {
         btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         btn.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
+        log.debug("test")
     }
 
 }
