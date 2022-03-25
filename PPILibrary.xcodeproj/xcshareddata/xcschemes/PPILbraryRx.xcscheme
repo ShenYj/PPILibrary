@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1310"
+   LastUpgradeVersion = "1330"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F738DD1F275762BA000918C1"
-               BuildableName = "PPILibiraryRx.framework"
+               BuildableName = "PPILibraryRx.framework"
                BlueprintName = "PPILibraryRx"
                ReferencedContainer = "container:PPILibrary.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F738DD1F275762BA000918C1"
-            BuildableName = "PPILibiraryRx.framework"
+            BuildableName = "PPILibraryRx.framework"
             BlueprintName = "PPILibraryRx"
             ReferencedContainer = "container:PPILibrary.xcodeproj">
          </BuildableReference>

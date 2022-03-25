@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F737416D275489E600F95752"
-               BuildableName = "iOSDemo.app"
-               BlueprintName = "iOSDemo"
+               BlueprintIdentifier = "F7E5F23B27EC4419008354BB"
+               BuildableName = "PPI_Rx_Demo.app"
+               BlueprintName = "PPI_Rx_Demo"
                ReferencedContainer = "container:PPILibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F737416D275489E600F95752"
-            BuildableName = "iOSDemo.app"
-            BlueprintName = "iOSDemo"
+            BlueprintIdentifier = "F7E5F23B27EC4419008354BB"
+            BuildableName = "PPI_Rx_Demo.app"
+            BlueprintName = "PPI_Rx_Demo"
             ReferencedContainer = "container:PPILibrary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F737416D275489E600F95752"
-            BuildableName = "iOSDemo.app"
-            BlueprintName = "iOSDemo"
+            BlueprintIdentifier = "F7E5F23B27EC4419008354BB"
+            BuildableName = "PPI_Rx_Demo.app"
+            BlueprintName = "PPI_Rx_Demo"
             ReferencedContainer = "container:PPILibrary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

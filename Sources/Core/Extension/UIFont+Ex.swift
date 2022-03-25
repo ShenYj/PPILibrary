@@ -52,7 +52,7 @@ public extension UIFont {
     static let SYS_F29 = UIFont.systemFont(ofSize: 29)
     static let SYS_F30 = UIFont.systemFont(ofSize: 30)
     
-    // MARK: medium字体
+    // MARK: medium 字体
     static let SYS_MDEIUM_F08 = UIFont.systemFont(ofSize: 08, weight: .medium)
     static let SYS_MDEIUM_F09 = UIFont.systemFont(ofSize: 09, weight: .medium)
     static let SYS_MDEIUM_F10 = UIFont.systemFont(ofSize: 10, weight: .medium)
@@ -79,7 +79,7 @@ public extension UIFont {
     static let SYS_MDEIUM_F31 = UIFont.systemFont(ofSize: 31, weight: .medium)
     static let SYS_MDEIUM_F32 = UIFont.systemFont(ofSize: 32, weight: .medium)
     
-    // MARK: bold字体
+    // MARK: bold 字体
     static let SYS_BOLD_F10 = UIFont.systemFont(ofSize: 10, weight: .bold)
     static let SYS_BOLD_F11 = UIFont.systemFont(ofSize: 11, weight: .bold)
     static let SYS_BOLD_F12 = UIFont.systemFont(ofSize: 12, weight: .bold)

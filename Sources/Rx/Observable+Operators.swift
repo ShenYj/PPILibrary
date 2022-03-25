@@ -11,13 +11,13 @@ import UIKit
 import Foundation
 import RxSwift
 import RxCocoa
-import RxGesture
+//import RxGesture
 
-extension Reactive where Base: UIView {
-    func tap() -> Observable<Void> {
-        return tapGesture().when(.recognized).mapToVoid()
-    }
-}
+//extension Reactive where Base: RxGestureView {
+//    func tap() -> Observable<Void> {
+//        return tapGesture().when(.recognized).mapToVoid()
+//    }
+//}
 
 protocol OptionalType {
     associatedtype Wrapped
@@ -99,8 +99,11 @@ extension SharedSequenceConvertibleType {
 extension ObservableType {
 
     func catchErrorJustComplete() -> Observable<Element> {
-        return catchError { _ in
-            return Observable.empty()
+        //return catchError { _ in
+        //    return Observable.empty()
+        //}
+        return `catch` { _ in
+            Observable.empty()
         }
     }
 

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F737416D275489E600F95752"
-               BuildableName = "iOSDemo.app"
-               BlueprintName = "iOSDemo"
+               BlueprintIdentifier = "F7302E1C2757A1E400ED215C"
+               BuildableName = "PPILibraryRxUI.framework"
+               BlueprintName = "PPILibraryRxUI"
                ReferencedContainer = "container:PPILibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F737416D275489E600F95752"
-            BuildableName = "iOSDemo.app"
-            BlueprintName = "iOSDemo"
-            ReferencedContainer = "container:PPILibrary.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F737416D275489E600F95752"
-            BuildableName = "iOSDemo.app"
-            BlueprintName = "iOSDemo"
+            BlueprintIdentifier = "F7302E1C2757A1E400ED215C"
+            BuildableName = "PPILibraryRxUI.framework"
+            BlueprintName = "PPILibraryRxUI"
             ReferencedContainer = "container:PPILibrary.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

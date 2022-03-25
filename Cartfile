@@ -1,7 +1,26 @@
-#github "CocoaLumberjack/CocoaLumberjack" ~> 3.7.2
-github "ReactiveX/RxSwift" ~> 6.2
+github "CocoaLumberjack/CocoaLumberjack" ~> 3.7.2
+
+# Rx
+github "ReactiveX/RxSwift" ~> 6.0
 github "RxSwiftCommunity/RxSwiftExt" ~> 6.0
 github "RxSwiftCommunity/RxOptional" ~> 5.0
 github "RxSwiftCommunity/NSObject-Rx" ~> 5.0
 github "RxSwiftCommunity/RxDataSources" ~> 5.0
 github "RxSwiftCommunity/RxGesture" ~> 4.0
+
+# UI
+github "RxSwiftCommunity/RxAnimated" ~> 0.9
+github "RxSwiftCommunity/RxKeyboard" ~> 2.0
+github "devxoul/RxViewController" ~> 2.0
+github "pixeldock/RxAppState" ~> 1.7
+github "RxSwiftCommunity/RxKingfisher" ~> 2.0
+github "RxSwiftCommunity/RxAlert" ~> 1.5
+github "lm2343635/RxAlertViewable" ~> 1.2
+
+
+# LBS
+github "RxSwiftCommunity/RxCoreLocation" ~> 1.0
+
+# Localizer
+#github "RxSwiftCommunity/RxLocalizer" ~> 1.0
+

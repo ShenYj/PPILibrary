@@ -30,6 +30,10 @@ class ViewController: UIViewController {
         btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         btn.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = TestViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
