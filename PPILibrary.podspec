@@ -111,8 +111,8 @@ Pod::Spec.new do |spec|
       ui.dependency "RxAppState", "~> 1.7"
       ui.dependency "RxViewController", "~> 2.0"
       
-      ## MVVM
-      rx.subspec "MVVM" do |mvvm|
+      ### MVVM
+      ui.subspec "MVVM" do |mvvm|
         mvvm.source_files = "Sources/Rx/UI/MVVM/"
       end
       
