@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name               = "PPILibrary"
-  spec.version            = "0.0.4"
+  spec.version            = "0.0.5"
   spec.homepage           = "https://github.com/ShenYj/PPILibrary"
   spec.license            = { :type => "MIT", :file => "License" }
   spec.authors            = { "ShenYj" => "shenyanjie123@foxmail.com" }
@@ -58,7 +58,7 @@ Pod::Spec.new do |spec|
       ui.dependency "RxAlertViewable", "~> 1.0"
       ui.dependency "RxKingfisher", "~> 2.0"
       ui.dependency "RxAppState", "~> 1.7"
-      #ui.dependency "RxViewController", "~> 2.0"
+      ui.dependency "RxViewController", "~> 2.0"
       
       ui.subspec "Animate" do |animate|
         animate.dependency "RxAnimated", "~> 0.9"
