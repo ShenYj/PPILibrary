@@ -27,9 +27,10 @@ Pod::Spec.new do |spec|
                             * UI: 包含 RxUIAlert、RxAlertViewable、RxKingfisher、RxAppState、RxViewController
                               * Animate: 包含 RxAnimated
                             * LBS: 包含 RxCoreLocation
+                            
                             DESC
 
-  spec.ios.deployment_target = "12.0"
+  spec.ios.deployment_target = "11.0"
   spec.default_subspecs      = "Core"
   
   
@@ -37,6 +38,55 @@ Pod::Spec.new do |spec|
   spec.subspec "Core" do |core|
     core.source_files = "Sources/Core/", "Sources/Core/Protocol/", "Sources/Core/Extension/"
     core.frameworks = "Foundation", "UIKit"
+  end
+    
+  # 基础 工具类 开源库扩展
+  spec.subspec "Tool" do |tool|
+    tool.dependency "R.swift", "~> 6.0"
+    tool.dependency "SwiftDate", "~> 6.0"
+    tool.dependency "Dollar", "~> 9.0"
+    
+    ## Log 工具
+    tool.subspec "Log" do |log|
+      log.source_files = "Sources/Tool/Log/"
+      log.dependency "CocoaLumberjack/Swift", "~> 3.0"
+    end
+    
+    ## 持久化
+    tool.subspec "Cache" do |cache|
+      cache.dependency "SwiftyUserDefaults", "~> 5.0"
+    end
+    
+    ## 加密
+    tool.subspec "Security" do |security|
+      security.dependency "CryptoSwift", "~> 1.0"
+    end
+    
+    ## 反序列化
+    tool.subspec "Deserialize" do |deserialize|
+      deserialize.dependency "SwiftyJSON", "~> 5.0"
+      
+      ### ObjectMapper
+      tool.subspec "ObjectMapper" do |om|
+        om.dependency "ObjectMapper", "~> 4.0"
+      end
+    end
+  end
+  
+  # 基础 UI 开源库扩展
+  spec.subspec "UI" do |ui|
+    ui.dependency "SnapKit", "~> 5.0"
+    ui.dependency "Then", "~> 2.0"
+    ui.dependency "DeviceKit", "~> 4.0"
+    ui.dependency "FCUUID", "~> 1.0"
+    ui.dependency "MJRefresh", "~> 3.0"
+    ui.dependency "IQKeyboardManagerSwift", "~> 6.0"
+    
+    ## 颜色
+    ui.subspec "Colour" do |colour|
+      colour.dependency "Hue", "~> 5.0"
+    end
+
   end
   
   # RxSwift 扩展
@@ -52,6 +102,7 @@ Pod::Spec.new do |spec|
     rx.dependency "RxGesture", "~> 4.0"
     rx.dependency "RxDataSources", "~> 5.0"
 
+    ## RxSwift UI 扩展
     rx.subspec "UI" do |ui|
       ui.source_files = "Sources/Rx/UI/"
       ui.dependency "RxUIAlert", "~> 1.5"
@@ -60,15 +111,23 @@ Pod::Spec.new do |spec|
       ui.dependency "RxAppState", "~> 1.7"
       ui.dependency "RxViewController", "~> 2.0"
       
+      ## MVVM
+      rx.subspec "MVVM" do |mvvm|
+        mvvm.source_files = "Sources/Rx/UI/MVVM/"
+      end
+      
+      ### RxSwift 动画扩展
       ui.subspec "Animate" do |animate|
         animate.dependency "RxAnimated", "~> 0.9"
       end
     end
-
+    
+    ## RxSwift 定位扩展
     #rx.subspec "LBS" do |lbs|
-      #lbs.dependency "RxCoreLocation", "~> 1.0"
+      #lbs.dependency "RxCoreLocation", "~> 1.5"
     #end
     
   end
+
   
 end
