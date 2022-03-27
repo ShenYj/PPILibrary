@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7096F9027F06A8100CA410C /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3827576345000918C1 /* Observable+Operators.swift */; };
+		F7096F9127F06A8500CA410C /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3727576345000918C1 /* ErrorTracker.swift */; };
+		F7096F9227F06A8B00CA410C /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3B27576345000918C1 /* ActivityIndicator.swift */; };
+		F7096F9327F06A8F00CA410C /* UILabel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED6AC527944F3F008A3345 /* UILabel+Rx.swift */; };
+		F7096F9427F06A9100CA410C /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED6AC627944F3F008A3345 /* UIButton+Rx.swift */; };
+		F7096F9527F06A9300CA410C /* UITableViewCell+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED6AC727944F3F008A3345 /* UITableViewCell+Rx.swift */; };
 		F732470E27EF51ED003E6DAC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732470D27EF51ED003E6DAC /* Logger.swift */; };
 		F732471427EF590E003E6DAC /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732471127EF590E003E6DAC /* ViewType.swift */; };
 		F732471527EF590E003E6DAC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732471227EF590E003E6DAC /* ViewModelType.swift */; };
@@ -37,9 +43,6 @@
 		F738DCDA27568255000918C1 /* PPILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; platformFilter = ios; };
 		F738DCDB27568255000918C1 /* PPILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F738DD3427576322000918C1 /* PPILibiraryRx.h in Headers */ = {isa = PBXBuildFile; fileRef = F738DD3327576321000918C1 /* PPILibiraryRx.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F738DD3E27576345000918C1 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3727576345000918C1 /* ErrorTracker.swift */; };
-		F738DD3F27576345000918C1 /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3827576345000918C1 /* Observable+Operators.swift */; };
-		F738DD4127576345000918C1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3B27576345000918C1 /* ActivityIndicator.swift */; };
 		F77E29B027DF08C100F3226F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E29AF27DF08C100F3226F /* TestViewController.swift */; };
 		F789760E27ED8D2A000EDD18 /* RxDataSources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4427577311000918C1 /* RxDataSources.xcframework */; };
 		F789761027ED8D2C000EDD18 /* NSObject_Rx.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4827577311000918C1 /* NSObject_Rx.xcframework */; };
@@ -526,23 +529,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				F73741E027548E9700F95752 /* UIView+Ex.swift in Sources */,
+				F7096F9527F06A9300CA410C /* UITableViewCell+Rx.swift in Sources */,
 				F73741EC27548E9700F95752 /* UIWindow+Ex.swift in Sources */,
 				F73741EF27548E9700F95752 /* UIViewController+Ex.swift in Sources */,
 				F73741E327548E9700F95752 /* UINavigationController+Ex.swift in Sources */,
+				F7096F9227F06A8B00CA410C /* ActivityIndicator.swift in Sources */,
 				F73741E627548E9700F95752 /* TableViewController+Ex.swift in Sources */,
 				F73741EA27548E9700F95752 /* UIFont+Ex.swift in Sources */,
+				F7096F9327F06A8F00CA410C /* UILabel+Rx.swift in Sources */,
 				F73741EE27548E9700F95752 /* UIImage+Ex.swift in Sources */,
 				F732471627EF590E003E6DAC /* BaseType.swift in Sources */,
 				F73741DF27548E9700F95752 /* CACornerMask+Ex.swift in Sources */,
 				F732471527EF590E003E6DAC /* ViewModelType.swift in Sources */,
 				F73741C327548D1400F95752 /* SandboxReadable.swift in Sources */,
 				F73741C827548D1400F95752 /* Syncable.swift in Sources */,
+				F7096F9127F06A8500CA410C /* ErrorTracker.swift in Sources */,
 				F73741C027548D1400F95752 /* Callable.swift in Sources */,
 				F732471427EF590E003E6DAC /* ViewType.swift in Sources */,
 				F73741BF27548D1400F95752 /* OpenURLable.swift in Sources */,
 				F73741C627548D1400F95752 /* OpenSettingable.swift in Sources */,
+				F7096F9427F06A9100CA410C /* UIButton+Rx.swift in Sources */,
 				F732470E27EF51ED003E6DAC /* Logger.swift in Sources */,
 				F73741C427548D1400F95752 /* ExitAppable.swift in Sources */,
+				F7096F9027F06A8100CA410C /* Observable+Operators.swift in Sources */,
 				F73741C227548D1400F95752 /* GetKeyWindowable.swift in Sources */,
 				F73741F72754947400F95752 /* DeviceTokenConvertible.swift in Sources */,
 				F73741CB27548D2900F95752 /* PPILibraryConst.swift in Sources */,
@@ -563,9 +572,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F738DD4127576345000918C1 /* ActivityIndicator.swift in Sources */,
-				F738DD3F27576345000918C1 /* Observable+Operators.swift in Sources */,
-				F738DD3E27576345000918C1 /* ErrorTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

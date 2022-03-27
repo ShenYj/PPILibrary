@@ -132,11 +132,10 @@ Pod::Spec.new do |spec|
     rx.subspec "Net" do |net|
       net.dependency "RxAlamofire", "~> 6.0"
       
-      ## RxSwift Moya
+      ### RxSwift Moya
       net.subspec "Moya" do |moya|
         moya.dependency "Moya/RxSwift", "~> 15.0"
       end
-      
     end
     
     ## RxSwift 定位扩展
