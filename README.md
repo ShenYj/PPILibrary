@@ -37,3 +37,22 @@ Personal plug-in library
     ```ruby
     pod 'PPILibrary', :subspecs => ['Core', 'Rx/UI/Animate'], :git => 'https://github.com/ShenYj/PPILibrary.git', :tag => '0.0.4'
     ```
+
+- 调试
+
+    ```ruby
+    post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if ( target.name == 'PPILibrary' )
+        target.build_configurations.each do |config|
+            if config.name == 'Debug'
+            # 为 Swift 添加预编译宏
+            config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-D', 'DEBUG']
+            # 为 Swift 添加预编译宏 （Xcode 8 以后推荐的方式）
+            config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] ||= ['DEBUG'] 
+            end
+          end
+        end
+      end
+    end
+    ```
