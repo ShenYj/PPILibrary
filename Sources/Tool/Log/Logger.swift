@@ -81,13 +81,19 @@ public final class Logger {
         DDOSLogger.sharedInstance.logFormatter = LogFormatter()
         DDLog.add(DDOSLogger.sharedInstance)
         
-        #if DEBUGLOG
+        #if DEBUG_FILE_LOG
         // File logger
-        DDFileLogger().do {
-            $0.rollingFrequency = TimeInterval(60 * 60 * 24)  // 24 hours
-            $0.logFileManager.maximumNumberOfLogFiles = 7
-            DDLog.add($0)
-        }
+        //DDFileLogger().do {
+        //    $0.rollingFrequency = TimeInterval(60 * 60 * 24)  // 24 hours
+        //    $0.logFileManager.maximumNumberOfLogFiles = 7
+        //    DDLog.add($0)
+        //}
+        
+        let fileLogger = DDFileLogger()
+        fileLogger.rollingFrequency = TimeInterval(60 * 60 * 24)
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        DDLog.add(fileLogger)
+        
         #endif
         
         #endif
@@ -132,7 +138,7 @@ public final class Logger {
     }
     
     public func logResourcesCount() {
-        #if RXSWIFT
+        #if TRACE_RESOURCES
         DDLogDebug("RxSwift resources count: \(RxSwift.Resources.total)")
         #endif
     }
