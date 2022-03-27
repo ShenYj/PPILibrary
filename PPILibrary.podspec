@@ -70,7 +70,7 @@ Pod::Spec.new do |spec|
       deserialize.dependency "SwiftyJSON", "~> 5.0"
       
       ### ObjectMapper
-      tool.subspec "ObjectMapper" do |om|
+      deserialize.subspec "ObjectMapper" do |om|
         om.dependency "ObjectMapper", "~> 4.0"
       end
     end
