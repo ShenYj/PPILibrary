@@ -47,9 +47,9 @@ Personal plug-in library
         target.build_configurations.each do |config|
             if config.name == 'Debug'
             # 为 Swift 添加预编译宏
-            config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-D', 'DEBUG']
+            config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-D', 'DEBUG_FILE_LOG']
             # 为 Swift 添加预编译宏 （Xcode 8 以后推荐的方式）
-            config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] ||= ['DEBUG'] 
+            config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = "$(inherited) DEBUG_FILE_LOG"
             end
           end
         end
