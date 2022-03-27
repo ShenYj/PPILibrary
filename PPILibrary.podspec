@@ -45,6 +45,9 @@ Pod::Spec.new do |spec|
     tool.dependency "R.swift", "~> 6.0"
     tool.dependency "SwiftDate", "~> 6.0"
     tool.dependency "Dollar", "~> 9.0"
+    tool.dependency "SwifterSwift/SwiftStdlib", "~> 5.0"
+    tool.dependency "SwifterSwift/Foundation", "~> 5.0"
+    tool.dependency "SwifterSwift/Dispatch", "~> 5.0"
     
     ## Log 工具
     tool.subspec "Log" do |log|
@@ -81,6 +84,9 @@ Pod::Spec.new do |spec|
     ui.dependency "FCUUID", "~> 1.0"
     ui.dependency "MJRefresh", "~> 3.0"
     ui.dependency "IQKeyboardManagerSwift", "~> 6.0"
+    ui.dependency "SwifterSwift/UIKit", "~> 5.0"
+    ui.dependency "SwifterSwift/CoreGraphics", "~> 5.0"
+    ui.dependency "SwifterSwift/CoreAnimation", "~> 5.0"
     
     ## 颜色
     ui.subspec "Colour" do |colour|
