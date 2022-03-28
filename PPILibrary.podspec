@@ -122,8 +122,8 @@ Pod::Spec.new do |spec|
         mvvm.source_files = "Sources/Rx/UI/MVVM/"
       end
       
-      ### 消息提示
-      ui.subspec "Notice" do |notice|
+      ### Dialog
+      ui.subspec "Dialog" do |notice|
         notice.source_files = "Sources/Rx/UI/Dialog/"
         notice.dependency "SwiftMessages", "~> 9.0"
         notice.dependency "NotificationBannerSwift", "~> 3.0"
