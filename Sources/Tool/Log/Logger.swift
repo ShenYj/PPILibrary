@@ -1,6 +1,6 @@
 //
 //  Logger.swift
-//  ClockIn
+//
 //
 //  Created by ShenYj on 2021/03/22.
 //
