@@ -97,7 +97,7 @@ Pod::Spec.new do |spec|
   
   # RxSwift 扩展
   spec.subspec "Rx" do |rx|
-    rx.source_files = "Sources/Rx/*.swift", "Sources/Rx/RxErrorTracker/", "Sources/Rx/RxActivityIndicator/"
+    rx.source_files = "Sources/Rx/*.swift", "Sources/Rx/RxErrorTracker/*.swift", "Sources/Rx/RxActivityIndicator/*.swift"
     rx.dependency "PPILibrary/Core"
     
     rx.dependency "RxSwift", "~> 6.0"

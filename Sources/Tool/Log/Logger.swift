@@ -27,6 +27,7 @@
 import CocoaLumberjack
 
 extension DDLogFlag {
+    
     public var level: String {
         switch self {
         case DDLogFlag.error: return "❤️ ERROR"
