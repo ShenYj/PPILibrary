@@ -123,10 +123,10 @@ Pod::Spec.new do |spec|
       end
       
       ### Dialog
-      ui.subspec "Dialog" do |notice|
-        notice.source_files = "Sources/Rx/UI/Dialog/"
-        notice.dependency "SwiftMessages", "~> 9.0"
-        notice.dependency "NotificationBannerSwift", "~> 3.0"
+      ui.subspec "Dialog" do |dialog|
+        dialog.source_files = "Sources/Rx/UI/Dialog/"
+        dialog.dependency "SwiftMessages", "~> 9.0"
+        dialog.dependency "NotificationBannerSwift", "~> 3.0"
       end
       
       ### RxSwift 动画扩展
