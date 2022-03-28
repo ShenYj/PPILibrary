@@ -43,6 +43,11 @@
 		F738DCDA27568255000918C1 /* PPILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; platformFilter = ios; };
 		F738DCDB27568255000918C1 /* PPILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F738DD3427576322000918C1 /* PPILibiraryRx.h in Headers */ = {isa = PBXBuildFile; fileRef = F738DD3327576321000918C1 /* PPILibiraryRx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74AD0EE27F198F4004F0C4F /* Dialogable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0E927F198F4004F0C4F /* Dialogable.swift */; };
+		F74AD0EF27F198F4004F0C4F /* ShowMessageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0EA27F198F4004F0C4F /* ShowMessageable.swift */; };
+		F74AD0F027F198F4004F0C4F /* ShowNotifyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0EB27F198F4004F0C4F /* ShowNotifyable.swift */; };
+		F74AD0F127F198F4004F0C4F /* ShowToastable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0EC27F198F4004F0C4F /* ShowToastable.swift */; };
+		F74AD0F227F198F4004F0C4F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0ED27F198F4004F0C4F /* Toast.swift */; };
 		F77E29B027DF08C100F3226F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E29AF27DF08C100F3226F /* TestViewController.swift */; };
 		F789760E27ED8D2A000EDD18 /* RxDataSources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4427577311000918C1 /* RxDataSources.xcframework */; };
 		F789761027ED8D2C000EDD18 /* NSObject_Rx.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F738DD4827577311000918C1 /* NSObject_Rx.xcframework */; };
@@ -134,6 +139,11 @@
 		F738DD4827577311000918C1 /* NSObject_Rx.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NSObject_Rx.xcframework; path = Carthage/Build/NSObject_Rx.xcframework; sourceTree = "<group>"; };
 		F738DD4927577311000918C1 /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = Carthage/Build/RxSwift.xcframework; sourceTree = "<group>"; };
 		F738DD4A27577311000918C1 /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = Carthage/Build/RxRelay.xcframework; sourceTree = "<group>"; };
+		F74AD0E927F198F4004F0C4F /* Dialogable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialogable.swift; sourceTree = "<group>"; };
+		F74AD0EA27F198F4004F0C4F /* ShowMessageable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMessageable.swift; sourceTree = "<group>"; };
+		F74AD0EB27F198F4004F0C4F /* ShowNotifyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNotifyable.swift; sourceTree = "<group>"; };
+		F74AD0EC27F198F4004F0C4F /* ShowToastable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowToastable.swift; sourceTree = "<group>"; };
+		F74AD0ED27F198F4004F0C4F /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		F7541B432755C2CB00871787 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F7541B462755CBAF00871787 /* CocoaLumberjackSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjackSwift.xcframework; path = Carthage/Build/CocoaLumberjackSwift.xcframework; sourceTree = "<group>"; };
 		F7541B592755E3A700871787 /* CocoaLumberjack.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjack.xcframework; path = Carthage/Build/CocoaLumberjack.xcframework; sourceTree = "<group>"; };
@@ -333,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				F738DD3827576345000918C1 /* Observable+Operators.swift */,
+				F74AD0E827F198F4004F0C4F /* Dialog */,
 				F738DD3627576345000918C1 /* RxErrorTracker */,
 				F738DD3A27576345000918C1 /* RxActivityIndicator */,
 				F7ED6AC427944F3F008A3345 /* UI */,
@@ -354,6 +365,19 @@
 				F738DD3B27576345000918C1 /* ActivityIndicator.swift */,
 			);
 			path = RxActivityIndicator;
+			sourceTree = "<group>";
+		};
+		F74AD0E827F198F4004F0C4F /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				F74AD0E927F198F4004F0C4F /* Dialogable.swift */,
+				F74AD0EA27F198F4004F0C4F /* ShowMessageable.swift */,
+				F74AD0EB27F198F4004F0C4F /* ShowNotifyable.swift */,
+				F74AD0EC27F198F4004F0C4F /* ShowToastable.swift */,
+				F74AD0ED27F198F4004F0C4F /* Toast.swift */,
+			);
+			name = Dialog;
+			path = UI/Dialog;
 			sourceTree = "<group>";
 		};
 		F7541B422755C2A900871787 /* Deployment */ = {
@@ -533,6 +557,8 @@
 				F73741EC27548E9700F95752 /* UIWindow+Ex.swift in Sources */,
 				F73741EF27548E9700F95752 /* UIViewController+Ex.swift in Sources */,
 				F73741E327548E9700F95752 /* UINavigationController+Ex.swift in Sources */,
+				F74AD0F127F198F4004F0C4F /* ShowToastable.swift in Sources */,
+				F74AD0EF27F198F4004F0C4F /* ShowMessageable.swift in Sources */,
 				F7096F9227F06A8B00CA410C /* ActivityIndicator.swift in Sources */,
 				F73741E627548E9700F95752 /* TableViewController+Ex.swift in Sources */,
 				F73741EA27548E9700F95752 /* UIFont+Ex.swift in Sources */,
@@ -543,10 +569,13 @@
 				F732471527EF590E003E6DAC /* ViewModelType.swift in Sources */,
 				F73741C327548D1400F95752 /* SandboxReadable.swift in Sources */,
 				F73741C827548D1400F95752 /* Syncable.swift in Sources */,
+				F74AD0F227F198F4004F0C4F /* Toast.swift in Sources */,
+				F74AD0EE27F198F4004F0C4F /* Dialogable.swift in Sources */,
 				F7096F9127F06A8500CA410C /* ErrorTracker.swift in Sources */,
 				F73741C027548D1400F95752 /* Callable.swift in Sources */,
 				F732471427EF590E003E6DAC /* ViewType.swift in Sources */,
 				F73741BF27548D1400F95752 /* OpenURLable.swift in Sources */,
+				F74AD0F027F198F4004F0C4F /* ShowNotifyable.swift in Sources */,
 				F73741C627548D1400F95752 /* OpenSettingable.swift in Sources */,
 				F7096F9427F06A9100CA410C /* UIButton+Rx.swift in Sources */,
 				F732470E27EF51ED003E6DAC /* Logger.swift in Sources */,

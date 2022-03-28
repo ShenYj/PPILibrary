@@ -110,7 +110,7 @@ Pod::Spec.new do |spec|
 
     ## RxSwift UI 扩展
     rx.subspec "UI" do |ui|
-      ui.source_files = "Sources/Rx/UI/"
+      ui.source_files = "Sources/Rx/UI/*.swift"
       ui.dependency "RxUIAlert", "~> 1.5"
       ui.dependency "RxAlertViewable", "~> 1.0"
       ui.dependency "RxKingfisher", "~> 2.0"
@@ -120,6 +120,13 @@ Pod::Spec.new do |spec|
       ### MVVM
       ui.subspec "MVVM" do |mvvm|
         mvvm.source_files = "Sources/Rx/UI/MVVM/"
+      end
+      
+      ### 消息提示
+      ui.subspec "Notice" do |notice|
+        notice.source_files = "Sources/Rx/UI/Dialog/"
+        notice.dependency "SwiftMessages", "~> 9.0"
+        notice.dependency "NotificationBannerSwift", "~> 3.0"
       end
       
       ### RxSwift 动画扩展
