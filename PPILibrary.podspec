@@ -78,7 +78,6 @@ Pod::Spec.new do |spec|
   
   # 基础 UI 开源库扩展
   spec.subspec "UI" do |ui|
-    ui.source_files = "Sources/UI/"
     ui.dependency "PPILibrary/Core"
     ui.dependency "SnapKit", "~> 5.0"
     ui.dependency "Then", "~> 2.0"
