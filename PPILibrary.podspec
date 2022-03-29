@@ -126,8 +126,9 @@ Pod::Spec.new do |spec|
       ui.dependency "PPILibrary/Tool/Log"
       ui.dependency "PPILibrary/Rx/Base"
       
+      ui.dependency "RxKeyboard", "~> 2.0"
       ui.dependency "RxUIAlert", "~> 1.5"
-      ui.dependency "RxAlertViewable", "~> 1.0"
+      #ui.dependency "RxAlertViewable", "~> 1.0"
       ui.dependency "RxKingfisher", "~> 2.0"
       ui.dependency "RxAppState", "~> 1.7"
       ui.dependency "RxViewController", "~> 2.0"
