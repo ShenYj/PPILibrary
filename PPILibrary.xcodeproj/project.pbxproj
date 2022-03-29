@@ -8,13 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F7096F9027F06A8100CA410C /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F738DD3827576345000918C1 /* Observable+Operators.swift */; };
-		F7096F9327F06A8F00CA410C /* UILabel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED6AC527944F3F008A3345 /* UILabel+Rx.swift */; };
-		F7096F9427F06A9100CA410C /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED6AC627944F3F008A3345 /* UIButton+Rx.swift */; };
-		F7096F9527F06A9300CA410C /* UITableViewCell+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED6AC727944F3F008A3345 /* UITableViewCell+Rx.swift */; };
 		F732470E27EF51ED003E6DAC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732470D27EF51ED003E6DAC /* Logger.swift */; };
-		F732471427EF590E003E6DAC /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732471127EF590E003E6DAC /* ViewType.swift */; };
-		F732471527EF590E003E6DAC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732471227EF590E003E6DAC /* ViewModelType.swift */; };
-		F732471627EF590E003E6DAC /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732471327EF590E003E6DAC /* BaseType.swift */; };
 		F737419327548A7300F95752 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F737418327548A0B00F95752 /* ViewController.swift */; };
 		F737419427548A7900F95752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F737418927548A0B00F95752 /* AppDelegate.swift */; };
 		F737419527548AA300F95752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F737418427548A0B00F95752 /* Assets.xcassets */; };
@@ -40,7 +34,6 @@
 		F73742512754C2B300F95752 /* PPILibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = F73742502754C2B300F95752 /* PPILibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F738DCDA27568255000918C1 /* PPILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; platformFilter = ios; };
 		F738DCDB27568255000918C1 /* PPILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F73741202754885D00F95752 /* PPILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F738DD3427576322000918C1 /* PPILibiraryRx.h in Headers */ = {isa = PBXBuildFile; fileRef = F738DD3327576321000918C1 /* PPILibiraryRx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F74AD10327F1FF7E004F0C4F /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0F327F1FF7D004F0C4F /* ErrorTracker.swift */; };
 		F74AD10427F1FF7E004F0C4F /* UILabel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0F527F1FF7D004F0C4F /* UILabel+Rx.swift */; };
 		F74AD10527F1FF7E004F0C4F /* Dialogable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AD0F727F1FF7D004F0C4F /* Dialogable.swift */; };
@@ -101,9 +94,6 @@
 		F7302E1427577AD300ED215C /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoa.xcframework; path = Carthage/Build/RxCocoa.xcframework; sourceTree = "<group>"; };
 		F7302E162757965700ED215C /* RxGesture.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxGesture.xcframework; path = Carthage/Build/RxGesture.xcframework; sourceTree = "<group>"; };
 		F732470D27EF51ED003E6DAC /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		F732471127EF590E003E6DAC /* ViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
-		F732471227EF590E003E6DAC /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
-		F732471327EF590E003E6DAC /* BaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseType.swift; sourceTree = "<group>"; };
 		F73741202754885D00F95752 /* PPILibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPILibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F737416E275489E600F95752 /* iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F737418327548A0B00F95752 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,9 +122,7 @@
 		F73741F827549A0C00F95752 /* PPILibrary.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PPILibrary.podspec; sourceTree = "<group>"; };
 		F73741F92754B10100F95752 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F73742502754C2B300F95752 /* PPILibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPILibrary.h; sourceTree = "<group>"; };
-		F73742522754C2FA00F95752 /* PPILibraryLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPILibraryLogger.h; sourceTree = "<group>"; };
 		F738DD20275762BA000918C1 /* PPILibraryRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPILibraryRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F738DD3327576321000918C1 /* PPILibiraryRx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPILibiraryRx.h; sourceTree = "<group>"; };
 		F738DD3827576345000918C1 /* Observable+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Operators.swift"; sourceTree = "<group>"; };
 		F738DD4427577311000918C1 /* RxDataSources.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxDataSources.xcframework; path = Carthage/Build/RxDataSources.xcframework; sourceTree = "<group>"; };
 		F738DD4527577311000918C1 /* RxCocoaRuntime.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoaRuntime.xcframework; path = Carthage/Build/RxCocoaRuntime.xcframework; sourceTree = "<group>"; };
@@ -161,9 +149,6 @@
 		F7541B592755E3A700871787 /* CocoaLumberjack.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjack.xcframework; path = Carthage/Build/CocoaLumberjack.xcframework; sourceTree = "<group>"; };
 		F77E29AF27DF08C100F3226F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F789762327ED9FF0000EDD18 /* Differentiator.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Differentiator.xcframework; path = Carthage/Build/Differentiator.xcframework; sourceTree = "<group>"; };
-		F7ED6AC527944F3F008A3345 /* UILabel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Rx.swift"; sourceTree = "<group>"; };
-		F7ED6AC627944F3F008A3345 /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
-		F7ED6AC727944F3F008A3345 /* UITableViewCell+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,16 +200,6 @@
 				F732470D27EF51ED003E6DAC /* Logger.swift */,
 			);
 			path = Log;
-			sourceTree = "<group>";
-		};
-		F732471027EF590E003E6DAC /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				F732471127EF590E003E6DAC /* ViewType.swift */,
-				F732471227EF590E003E6DAC /* ViewModelType.swift */,
-				F732471327EF590E003E6DAC /* BaseType.swift */,
-			);
-			path = MVVM;
 			sourceTree = "<group>";
 		};
 		F73741162754885D00F95752 = {
@@ -345,8 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				F73742502754C2B300F95752 /* PPILibrary.h */,
-				F738DD3327576321000918C1 /* PPILibiraryRx.h */,
-				F73742522754C2FA00F95752 /* PPILibraryLogger.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -358,7 +331,6 @@
 				F74AD10227F1FF7D004F0C4F /* ActivityIndicator.swift */,
 				F74AD0F327F1FF7D004F0C4F /* ErrorTracker.swift */,
 				F74AD0F427F1FF7D004F0C4F /* UI */,
-				F7ED6AC427944F3F008A3345 /* UI */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -390,9 +362,9 @@
 		F74AD0FE27F1FF7D004F0C4F /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F74AD10127F1FF7D004F0C4F /* BaseType.swift */,
 				F74AD0FF27F1FF7D004F0C4F /* ViewType.swift */,
 				F74AD10027F1FF7D004F0C4F /* ViewModelType.swift */,
-				F74AD10127F1FF7D004F0C4F /* BaseType.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -404,17 +376,6 @@
 				F73741F827549A0C00F95752 /* PPILibrary.podspec */,
 			);
 			name = Deployment;
-			sourceTree = "<group>";
-		};
-		F7ED6AC427944F3F008A3345 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				F732471027EF590E003E6DAC /* MVVM */,
-				F7ED6AC527944F3F008A3345 /* UILabel+Rx.swift */,
-				F7ED6AC627944F3F008A3345 /* UIButton+Rx.swift */,
-				F7ED6AC727944F3F008A3345 /* UITableViewCell+Rx.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +393,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F738DD3427576322000918C1 /* PPILibiraryRx.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,30 +532,24 @@
 				F74AD10927F1FF7E004F0C4F /* Toast.swift in Sources */,
 				F74AD10D27F1FF7E004F0C4F /* ViewModelType.swift in Sources */,
 				F73741E027548E9700F95752 /* UIView+Ex.swift in Sources */,
-				F7096F9527F06A9300CA410C /* UITableViewCell+Rx.swift in Sources */,
 				F73741EC27548E9700F95752 /* UIWindow+Ex.swift in Sources */,
 				F73741EF27548E9700F95752 /* UIViewController+Ex.swift in Sources */,
 				F73741E327548E9700F95752 /* UINavigationController+Ex.swift in Sources */,
 				F74AD10627F1FF7E004F0C4F /* ShowMessageable.swift in Sources */,
 				F73741E627548E9700F95752 /* TableViewController+Ex.swift in Sources */,
 				F73741EA27548E9700F95752 /* UIFont+Ex.swift in Sources */,
-				F7096F9327F06A8F00CA410C /* UILabel+Rx.swift in Sources */,
 				F73741EE27548E9700F95752 /* UIImage+Ex.swift in Sources */,
-				F732471627EF590E003E6DAC /* BaseType.swift in Sources */,
 				F73741DF27548E9700F95752 /* CACornerMask+Ex.swift in Sources */,
 				F74AD10A27F1FF7E004F0C4F /* UIButton+Rx.swift in Sources */,
-				F732471527EF590E003E6DAC /* ViewModelType.swift in Sources */,
 				F73741C327548D1400F95752 /* SandboxReadable.swift in Sources */,
 				F73741C827548D1400F95752 /* Syncable.swift in Sources */,
 				F74AD10F27F1FF7E004F0C4F /* ActivityIndicator.swift in Sources */,
 				F73741C027548D1400F95752 /* Callable.swift in Sources */,
 				F74AD10C27F1FF7E004F0C4F /* ViewType.swift in Sources */,
 				F74AD10327F1FF7E004F0C4F /* ErrorTracker.swift in Sources */,
-				F732471427EF590E003E6DAC /* ViewType.swift in Sources */,
 				F73741BF27548D1400F95752 /* OpenURLable.swift in Sources */,
 				F74AD10E27F1FF7E004F0C4F /* BaseType.swift in Sources */,
 				F73741C627548D1400F95752 /* OpenSettingable.swift in Sources */,
-				F7096F9427F06A9100CA410C /* UIButton+Rx.swift in Sources */,
 				F74AD10727F1FF7E004F0C4F /* ShowNotifyable.swift in Sources */,
 				F732470E27EF51ED003E6DAC /* Logger.swift in Sources */,
 				F73741C427548D1400F95752 /* ExitAppable.swift in Sources */,
