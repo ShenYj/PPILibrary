@@ -121,17 +121,21 @@ Pod::Spec.new do |spec|
 
     ## RxSwift UI 扩展
     rx.subspec "UI" do |ui|
-      ui.source_files = "Sources/Rx/UI/Extension/*.swift"
       
       ui.dependency "PPILibrary/UI"
-      ui.dependency "PPILibrary/Rx/Base"
       ui.dependency "PPILibrary/Tool/Log"
+      ui.dependency "PPILibrary/Rx/Base"
       
       ui.dependency "RxUIAlert", "~> 1.5"
       ui.dependency "RxAlertViewable", "~> 1.0"
       ui.dependency "RxKingfisher", "~> 2.0"
       ui.dependency "RxAppState", "~> 1.7"
       ui.dependency "RxViewController", "~> 2.0"
+      
+      ### Extension
+      ui.subspec "Extension" do |ex|
+        ex.source_files = "Sources/Rx/UI/Extension/"
+      end
       
       ### MVVM
       ui.subspec "MVVM" do |mvvm|
