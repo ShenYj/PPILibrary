@@ -1,8 +1,8 @@
 //
-//  CACornerMask+Ex.swift
+//  Unionable.swift
 //  
 //
-//  Created by ShenYj on 2021/05/21.
+//  Created by ShenYj on 2021/02/25.
 //
 //  Copyright (c) 2021 ShenYj <shenyanjie123@foxmail.com>
 //
@@ -24,30 +24,41 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import UIKit
+import Dollar
 
-public extension CACornerMask {
-    
-    /// 左上、左下
-    static var leftCorner: CACornerMask { [.layerMinXMinYCorner, .layerMinXMaxYCorner] }
-    /// 右上、右下
-    static var rightCorner: CACornerMask { [.layerMaxXMinYCorner, .layerMaxXMaxYCorner] }
-    /// 上左、上右
-    static var topCorner: CACornerMask { [.layerMinXMinYCorner, .layerMaxXMinYCorner] }
-    /// 下左、下右
-    static var bottomCorner: CACornerMask { [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] }
-    /// 上左、上右、下左、下右
-    static var allCorner: CACornerMask { [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner] }
+public protocol Unionable {
+
+    // 数据合并
+    ///
+    /// - Note: 取交集, 用于网络请求回来后是拼接在前面, 还是追加在后面
+    ///
+    /// - Parameter originalData: 原始数据
+    /// - Parameter targetData:   目标数据
+    /// - Parameter flag:         是否追加
+    ///
+    func union<T: Hashable>(of originalData: [T], with targetData: [T]?, append flag: Bool) -> [T]
 }
 
-public extension UIView {
+public extension Unionable {
     
-    /// 设置圆角
+    
+    /// 数据合并
     ///
-    /// - Note: 默认`radius`为`5`, 四个角
+    /// - Note: 取交集, 用于网络请求回来后是拼接在前面, 还是追加在后面
     ///
-    public func setCorner(radius: CGFloat = 5.0, maskedCorners: CACornerMask = .allCorner ) {
-        layer.cornerRadius = radius
-        layer.maskedCorners = maskedCorners
+    /// - Parameter originalData: 原始数据
+    /// - Parameter targetData:   目标数据
+    /// - Parameter flag:         是否追加
+    ///
+    func union<T: Hashable>(of originalData: [T], with targetData: [T]?, append flag: Bool) -> [T] {
+        guard let newData = targetData else { return originalData }
+        var final = originalData
+        if flag {
+            final = Dollar.union(originalData, newData)
+        }
+        else {
+            final = Dollar.union(newData, originalData)
+        }
+        return final
     }
 }

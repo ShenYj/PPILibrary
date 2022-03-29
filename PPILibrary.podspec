@@ -49,6 +49,13 @@ Pod::Spec.new do |spec|
     tool.dependency "SwifterSwift/Foundation", "~> 5.0"
     tool.dependency "SwifterSwift/Dispatch", "~> 5.0"
     
+    ## Base
+    tool.subspec "Base" do |base|
+      base.dependency "PPILibrary/Core"
+      base.source_files = "Sources/Tool/Base/"
+      base.frameworks = "AVFoundation", "LocalAuthentication"
+    end
+    
     ## Log 工具
     tool.subspec "Log" do |log|
       log.source_files = "Sources/Tool/Log/"
@@ -114,8 +121,12 @@ Pod::Spec.new do |spec|
 
     ## RxSwift UI 扩展
     rx.subspec "UI" do |ui|
-      ui.source_files = "Sources/Rx/UI/*.swift"
+      ui.source_files = "Sources/Rx/UI/Extension/*.swift"
+      
+      ui.dependency "PPILibrary/UI"
       ui.dependency "PPILibrary/Rx/Base"
+      ui.dependency "PPILibrary/Tool/Log"
+      
       ui.dependency "RxUIAlert", "~> 1.5"
       ui.dependency "RxAlertViewable", "~> 1.0"
       ui.dependency "RxKingfisher", "~> 2.0"
@@ -144,6 +155,7 @@ Pod::Spec.new do |spec|
     rx.subspec "Net" do |net|
       net.dependency "PPILibrary/Rx/Base"
       net.dependency "RxAlamofire", "~> 6.0"
+      net.dependency "RxReachability", "~> 1.0"
       
       ### RxSwift Moya
       net.subspec "Moya" do |moya|

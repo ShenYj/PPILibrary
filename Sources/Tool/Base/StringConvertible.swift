@@ -1,8 +1,8 @@
 //
-//  CACornerMask+Ex.swift
-//  
+//  StringConvertable.swift
 //
-//  Created by ShenYj on 2021/05/21.
+//
+//  Created by ShenYj on 2021/03/22.
 //
 //  Copyright (c) 2021 ShenYj <shenyanjie123@foxmail.com>
 //
@@ -24,30 +24,22 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import UIKit
 
-public extension CACornerMask {
-    
-    /// 左上、左下
-    static var leftCorner: CACornerMask { [.layerMinXMinYCorner, .layerMinXMaxYCorner] }
-    /// 右上、右下
-    static var rightCorner: CACornerMask { [.layerMaxXMinYCorner, .layerMaxXMaxYCorner] }
-    /// 上左、上右
-    static var topCorner: CACornerMask { [.layerMinXMinYCorner, .layerMaxXMinYCorner] }
-    /// 下左、下右
-    static var bottomCorner: CACornerMask { [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] }
-    /// 上左、上右、下左、下右
-    static var allCorner: CACornerMask { [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner] }
-}
+public protocol StringConvertible where Self: StringProtocol { }
 
-public extension UIView {
+// MARK: 小驼峰、下划线处理
+public extension StringConvertible {
     
-    /// 设置圆角
+    /// 将带有下划线的字符串转为小驼峰格式
     ///
-    /// - Note: 默认`radius`为`5`, 四个角
+    /// - Note: 将带有下划线的字符串转为小驼峰格式
     ///
-    public func setCorner(radius: CGFloat = 5.0, maskedCorners: CACornerMask = .allCorner ) {
-        layer.cornerRadius = radius
-        layer.maskedCorners = maskedCorners
+    var capitalizedString: String {
+        var components = self.components(separatedBy: "_")
+        let firstElement = components.removeFirst().lowercased()
+        let final = components
+            .compactMap( { $0.capitalized } )
+            .reduce(firstElement) { $0 + $1 }
+        return final
     }
 }

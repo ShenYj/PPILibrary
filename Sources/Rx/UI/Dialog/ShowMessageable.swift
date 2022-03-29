@@ -28,7 +28,6 @@ import SwiftMessages
 
 public protocol ShowMessageable { }
 
-
 extension ShowMessageable {
     
     /// 展示`message`
