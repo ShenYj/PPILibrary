@@ -99,7 +99,6 @@ Pod::Spec.new do |spec|
   
   # RxSwift 扩展
   spec.subspec "Rx" do |rx|
-    rx.source_files = "Sources/Rx/Base/"
     rx.dependency "PPILibrary/Core"
     rx.dependency "RxSwift", "~> 6.0"
     rx.dependency "RxCocoa", "~> 6.0"
@@ -108,10 +107,16 @@ Pod::Spec.new do |spec|
     rx.dependency "NSObject+Rx", "~> 5.0"
     rx.dependency "RxGesture", "~> 4.0"
     rx.dependency "RxDataSources", "~> 5.0"
+    
+    ## RxSwift 基础 扩展 （放在上层一直无法被包含进去）
+    rx.subspec "Base" do |base|
+      base.source_files = "Sources/Rx/Base/"
+    end
 
     ## RxSwift UI 扩展
     rx.subspec "UI" do |ui|
       ui.source_files = "Sources/Rx/UI/*.swift"
+      ui.dependency "PPILibrary/Rx/Base"
       ui.dependency "RxUIAlert", "~> 1.5"
       ui.dependency "RxAlertViewable", "~> 1.0"
       ui.dependency "RxKingfisher", "~> 2.0"
@@ -138,6 +143,7 @@ Pod::Spec.new do |spec|
     
     ## RxSwift 网络 扩展
     rx.subspec "Net" do |net|
+      net.dependency "PPILibrary/Rx/Base"
       net.dependency "RxAlamofire", "~> 6.0"
       
       ### RxSwift Moya
