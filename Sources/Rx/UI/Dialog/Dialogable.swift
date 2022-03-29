@@ -57,7 +57,7 @@ public enum Lib {
 }
 
 
-extension Dialogable {
+public extension Dialogable {
     
     /// 通用方法, 基于`UIViewController`提供
     ///
