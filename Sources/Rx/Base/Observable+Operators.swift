@@ -31,23 +31,6 @@ extension Optional: OptionalType {
     }
 }
 
-protocol BooleanType {
-    var boolValue: Bool { get }
-}
-
-extension Bool: BooleanType {
-    public var boolValue: Bool { return self }
-}
-
-// Maps true to false and vice versa
-extension Observable where Element: BooleanType {
-    public func not() -> Observable<Bool> {
-        return self.map { input in
-            return !input.boolValue
-        }
-    }
-}
-
 extension Observable where Element: Equatable {
     public func ignore(value: Element) -> Observable<Element> {
         return filter { (selfE) -> Bool in
