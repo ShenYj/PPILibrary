@@ -3,7 +3,6 @@
 // Copyright (c) 2017 sergdort. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
 
@@ -26,6 +25,8 @@ public final class ErrorTracker: SharedSequenceConvertibleType {
     private func onError(_ error: Error) {
         _subject.onNext(error)
     }
+    
+    public init() { }
 
     deinit {
         _subject.onCompleted()
