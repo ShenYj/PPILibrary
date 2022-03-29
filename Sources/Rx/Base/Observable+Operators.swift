@@ -26,12 +26,12 @@ protocol OptionalType {
 }
 
 extension Optional: OptionalType {
-    var value: Wrapped? {
+    public var value: Wrapped? {
         return self
     }
 }
 
-extension Observable where Element: OptionalType {
+public extension Observable where Element: OptionalType {
     func filterNil() -> Observable<Element.Wrapped> {
         return flatMap { (element) -> Observable<Element.Wrapped> in
             if let value = element.value {
@@ -62,13 +62,14 @@ extension Observable where Element: OptionalType {
 protocol BooleanType {
     var boolValue: Bool { get }
 }
+
 extension Bool: BooleanType {
-    var boolValue: Bool { return self }
+    public var boolValue: Bool { return self }
 }
 
 // Maps true to false and vice versa
 extension Observable where Element: BooleanType {
-    func not() -> Observable<Bool> {
+    public func not() -> Observable<Bool> {
         return self.map { input in
             return !input.boolValue
         }
@@ -76,17 +77,10 @@ extension Observable where Element: BooleanType {
 }
 
 extension Observable where Element: Equatable {
-    func ignore(value: Element) -> Observable<Element> {
+    public func ignore(value: Element) -> Observable<Element> {
         return filter { (selfE) -> Bool in
             return value != selfE
         }
-    }
-}
-
-extension ObservableType where Element == Bool {
-    /// Boolean not operator
-    public func not() -> Observable<Bool> {
-        return self.map(!)
     }
 }
 
@@ -98,7 +92,7 @@ extension SharedSequenceConvertibleType {
 
 extension ObservableType {
 
-    func catchErrorJustComplete() -> Observable<Element> {
+    public func catchErrorJustComplete() -> Observable<Element> {
         //return catchError { _ in
         //    return Observable.empty()
         //}
@@ -107,14 +101,14 @@ extension ObservableType {
         }
     }
 
-    func asDriverOnErrorJustComplete() -> Driver<Element> {
+    public func asDriverOnErrorJustComplete() -> Driver<Element> {
         return asDriver { error in
             assertionFailure("Error \(error)")
             return Driver.empty()
         }
     }
 
-    func mapToVoid() -> Observable<Void> {
+    public func mapToVoid() -> Observable<Void> {
         return map { _ in }
     }
 }
@@ -137,7 +131,7 @@ extension Reactive where Base: UIScrollView {
 
 infix operator <-> : DefaultPrecedence
 
-func nonMarkedText(_ textInput: UITextInput) -> String? {
+public func nonMarkedText(_ textInput: UITextInput) -> String? {
     let start = textInput.beginningOfDocument
     let end = textInput.endOfDocument
 
@@ -158,7 +152,7 @@ func nonMarkedText(_ textInput: UITextInput) -> String? {
     return (textInput.text(in: startRange) ?? "") + (textInput.text(in: endRange) ?? "")
 }
 
-func <-> <Base>(textInput: TextInput<Base>, variable: BehaviorRelay<String>) -> Disposable {
+public func <-> <Base>(textInput: TextInput<Base>, variable: BehaviorRelay<String>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
         .bind(to: textInput.text)
     let bindToVariable = textInput.text
@@ -190,7 +184,7 @@ func <-> <Base>(textInput: TextInput<Base>, variable: BehaviorRelay<String>) -> 
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
-func <-> <T>(property: ControlProperty<T>, variable: BehaviorRelay<T>) -> Disposable {
+public func <-> <T>(property: ControlProperty<T>, variable: BehaviorRelay<T>) -> Disposable {
     if T.self == String.self {
         #if DEBUG
         fatalError("It is ok to delete this message, but this is here to warn that you are maybe trying to bind to some `rx.text` property directly to variable.\n" +
