@@ -38,6 +38,30 @@ Personal plug-in library
     pod 'PPILibrary', :subspecs => ['Core', 'Rx/UI/Animate'], :git => 'https://github.com/ShenYj/PPILibrary.git', :tag => '0.0.4'
     ```
 
+- 指定某一次提交记录
+
+    ```ruby
+    def libs_forme
+    pod 'PPILibrary',
+        :subspecs => [
+            'Core',
+            'Tool/Base',
+            'Tool/Log',
+            'Tool/Cache',
+            'Tool/Security',
+            'Tool/Deserialize/ObjectMapper',
+            'UI/Colour',
+            'Rx/Net/Moya',
+            'Rx/UI/Dialog',
+            'Rx/UI/MVVM',
+            'Rx/UI/Extension',
+            'Rx/UI/Animate'
+        ],
+        :git => 'https://github.com/ShenYj/PPILibrary.git',
+        :commit => '9aaab0d'
+    end
+    ```
+
 - 调试
 
     ```ruby
@@ -56,3 +80,4 @@ Personal plug-in library
       end
     end
     ```
+
